@@ -1,8 +1,15 @@
+/*
+Nama	: Victor Wijaya
+Kelas	: A
+NPM 	: 140810170057
+Nama Program : Selection Sort
+*/
 #include <iostream>
+#include<conio.h>
 
 using namespace std;
 
-int data[10],data2[10];
+int data[100],data2[100];
 int n;
 
 void tukar(int a, int b)
@@ -27,21 +34,26 @@ void selection_sort()
 }
 
 int main()
-{	
-	cout<<"Masukkan Jumlah Array : ";cin>>n;
+{
+	cout << "\n=====================================";
+	cout<<"\nMasukkan Jumlah Data : ";cin>>n;
+	cout << "\n-------------------------------------" << endl;
 	for(int i=1;i<=n;i++)
 	{
-		cout<<"Bilangan ke-"<<i<<" : ";
+		cout<<"Masukkan data ke-"<<i<<" : ";
 		cin>>data[i];
 		data2[i]=data[i];
 	}
 	
 	selection_sort();
-	cout<<"Data Setelah di Sort : ";
+	cout << "\n-------------------------------------" << endl;
+	cout<<"Data Setelah di Sort : "<<endl;
 	for(int i=1; i<=n; i++)
 	{
 	  	cout<<" "<<data[i];
 	}
-
+	
+	cout << "\n=====================================\n";
+	getch();
 }
 

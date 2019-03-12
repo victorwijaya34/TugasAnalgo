@@ -1,3 +1,10 @@
+/*
+Nama	: Victor Wijaya
+Kelas	: A
+NPM 	: 140810170057
+Nama Program : Mencari nilai maks
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -5,20 +12,16 @@ int main(){
 	int x[99];
 	int n,maks,i;
 	
-	cout<<"Masukkan Jumlah Array :";cin>>n;
-	for(int i=0;i<n;){
-		cout<<"Bilangan ke - "<<++i<<" : ";cin>>x[i];
+	cout<<"Masukkan Jumlah Angka : ";cin>>n;
+	for(int i=0;i<n;i++){
+		cout<<"Bilangan ke - "<<i+1<<" : ";cin>>x[i];
 	}
 	
-	maks = x[1];
+	maks = 0;
 	
-	i = 2;
-	
-	do{
-		if(x[i]>maks){
+	for(int i=0;i<n;i++){
+		if(x[i]>maks)
 			maks=x[i];
-		}
-		i=i+1;
-	}while(i<=n);
+	}
 	cout<<"Output = "<<maks<<endl;
 }
